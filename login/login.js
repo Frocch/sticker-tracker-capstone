@@ -1,5 +1,9 @@
 const forms = document.querySelector(".forms");
 const links = document.querySelectorAll(".link");
+const uname = document.getElementById("username");
+const psw = document.getElementById("psw");
+const pswConf = document.getElementById("psw-conf");
+
 
 links.forEach(link => {
     link.addEventListener("click", e => {
@@ -8,4 +12,6 @@ links.forEach(link => {
     })
 })
 
-// function formValidation()
+// function createPass () {
+//     const passPattern = 
+// }
