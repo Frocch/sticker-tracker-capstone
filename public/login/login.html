@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login/Signup</title>
-    <link rel="stylesheet" href="styles.css"/>
+    <link rel="stylesheet" href="/logincss"/>
 </head>
 <body>
     <section class="container forms">
@@ -15,13 +15,13 @@
         <div class="form login">
             <div class="form-content">
                 <header>Login</header>
-                <form action="#" name="login">
+                <form action="#" name="login" id="login">
                     <div class="field input-field">
-                      <input type="text" placeholder="Username" class="input">
+                      <input type="text" placeholder="Username" id="username" class="input">
                     </div>
 
                     <div class="field input-field">
-                        <input type="password" placeholder="Password" class="password">
+                        <input type="password" placeholder="Password" id="login-psw" class="password">
                     </div>
 
                     <!-- <div class="form-link">
@@ -48,13 +48,14 @@
         <div class="form signup">
             <div class="form-content">
                 <header>Signup</header>
-                <form action="#" name="signup">
+                <form action="#" name="signup" id="signup">
                     <div class="field input-field">
-                      <input type="text" placeholder="Username" class="input" id="username">
+                      <input type="text" placeholder="Username" class="input" id="signup-username">
                     </div>
 
                     <div class="field input-field">
-                        <input type="password" placeholder="Password" class="password" id="psw">
+                        <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Password"
+                        class="password" id="psw">
                     </div>
 
                     <div class="field input-field">
@@ -66,6 +67,19 @@
                     </div>
                 </form>
 
+                <div id="message">
+                    <h4>Password must contain the following:</h4>
+                    <p id="letter" class="invalid">A <b>lowercase</b> letter.</p>
+                    <p id="capital" class="invalid">An <b>uppercase</b> letter.</p>
+                    <p id="number" class="invalid">A <b>number</b>.</p>
+                    <p id="length" class="invalid">Minimum <b>8 characters</b> long.</p>
+
+                </div>
+
+                <div id="confirmation-match">
+                    <p id="psw-match" class="invalid">Confirmation Password must must match.</p>
+                </div>
+
                 <div class="form-link">
                     <span>Already have an account? <a href="#" class="link login-link">Login</a> </span>
                 </div>
@@ -76,6 +90,8 @@
             
         </div>
     </section>
-    <script src="./login.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.0.0/axios.min.js" integrity="sha512-26uCxGyoPL1nESYXHQ+KUmm3Maml7MEQNWU8hIt1hJaZa5KQAQ5ehBqK6eydcCOh6YAuZjV3augxu/5tY4fsgQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="/loginjs"></script>
+
 </body>
 </html>

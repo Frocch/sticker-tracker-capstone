@@ -22,7 +22,7 @@ module.exports = {
         CREATE TABLE users (
             user_id SERIAL PRIMARY KEY,
             username VARCHAR(40),
-            password VARCHAR(40)
+            pwdHash VARCHAR(255)
         );
 
         CREATE TABLE countries (
@@ -43,7 +43,7 @@ module.exports = {
             sticker_id INTEGER REFERENCES stickers(sticker_id)
         );
         
-        INSERT INTO users (username, password)
+        INSERT INTO users (username, pwdHash)
         VALUES ('user1', 'password123');
 
         INSERT INTO countries (country_name)

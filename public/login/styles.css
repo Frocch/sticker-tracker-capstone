@@ -113,3 +113,49 @@ form .field{
     margin: 36px 0;
     background-color: #CACACA;
 }
+
+#message {
+    display: none;
+    color: 000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#message p {
+    padding: 10px 35px;
+    font-size: 14px;
+}
+
+#confirmation-match {
+    display: none;
+    color: 000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+#confirmation-match p {
+    padding: 10px 35px;
+    font-size: 14px;
+}
+
+.valid {
+    color: green;
+}
+
+.valid::before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+}
+
+.invalid {
+    color: red;
+}
+
+.invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+}
