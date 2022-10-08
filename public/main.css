@@ -7,12 +7,14 @@
     font-size: 100px;
     text-align: center;
     text-size-adjust: relative;
+    margin: 5px;
 }
 
 .description{
     color: #FEC310;
     text-align: center;
     text-size-adjust: relative;
+    margin: 5px;
 }
 
 .missing-btn{
@@ -29,6 +31,7 @@
 
 .menu-btns button:hover {
     box-shadow: 5px 5px 3px black ;
+    cursor: pointer;
 }
 
 .album-btn{
@@ -49,5 +52,74 @@
 }
 
 .sticker-list{
+    max-width: 1500px;
+    position: relative;
+    padding: 5px;
+    margin: auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
     text-decoration: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-content: center;
+    column-gap: 15px;
+}
+
+.teams {
+    text-align: center;
+    width: 275px;
+    background: #1077C3;
+    border: solid;
+    border-width: 2px;
+    
+}
+
+.team-stickers {
+    margin-bottom: 10px;
+    background-color: #1077C3;
+
+    
+}
+
+.team-name {
+    font-size: 20px;
+    font-weight: 400;
+    color: #FEC310;
+    background-color: #56042C;
+    margin-left: 50px;
+    margin-right: 50px;
+    padding-bottom: 5px;
+    border: solid;
+    border-width: 1px;
+    border-radius: 3px;
+    border-color: black;
+}
+.sticker-name {
+    max-width: 275px;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #56042C;
+    color: #FEC310;
+    margin-left: 3px;
+    margin-right: 3px;
+    padding: 5px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    border: solid;
+    border-width: 1px;
+    border-color: black;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sticker-name button {
+    background: #49BCE3;
+    border-width: 1px;
+}
+
+.sticker-name button:hover {
+    box-shadow: 3px 3px 3px black ;
+    cursor: pointer;
 }

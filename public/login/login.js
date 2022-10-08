@@ -1,5 +1,3 @@
-
-
 const forms = document.querySelector(".forms");
 const links = document.querySelectorAll(".link");
 const myInput = document.getElementById("psw");
@@ -100,7 +98,8 @@ function signupSubmitHandler(e) {
 
     axios.post('/users/signup', bodyObj)
     .then(res => {
-        localStorage.setItem('userId', res.body.user_id)
+        console.log(res.data)
+        localStorage.setItem('userId', res.data[0].user_id)
     })
 
     // localStorage.getItem('userId')
@@ -119,8 +118,9 @@ function loginSubmitHandler(e) {
 
     axios.post('/users/login', bodyObj)
     .then(res => {
-        localStorage.getItem('userId')
-    })
+        localStorage.setItem('userId', res.data[0].user_id)
+        window.location = '/main'
+    }).catch(err => alert('Invalid input.'))
 
 }
 

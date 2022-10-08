@@ -22,7 +22,7 @@ module.exports = {
         CREATE TABLE users (
             user_id SERIAL PRIMARY KEY,
             username VARCHAR(40),
-            pwdHash VARCHAR(255)
+            pwdhash VARCHAR(255)
         );
 
         CREATE TABLE countries (
@@ -42,9 +42,6 @@ module.exports = {
             user_id INTEGER REFERENCES users(user_id),
             sticker_id INTEGER REFERENCES stickers(sticker_id)
         );
-        
-        INSERT INTO users (username, pwdHash)
-        VALUES ('user1', 'password123');
 
         INSERT INTO countries (country_name)
         VALUES ('Argentina');
@@ -68,7 +65,7 @@ module.exports = {
         ('ARG16', 'Alejandro Gomez', 1),
         ('ARG17', 'Nicolas Gonzales', 1),
         ('ARG18', 'Lautaro Martinez', 1),
-        ('ARG19', 'Lionel Messi', 1)
+        ('ARG19', 'Lionel Messi', 1);
 
     `).then(() => {
         console.log('DB Seeded!')
