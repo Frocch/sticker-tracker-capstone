@@ -9,6 +9,23 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.header-main{
+    color: #FEC310;
+    font-size: 100px;
+    text-align: center;
+    text-size-adjust: relative;
+    margin: 0px;
+    background-color: #56042C;
+}
+
+.description{
+    color: #FEC310;
+    text-align: center;
+    text-size-adjust: relative;
+    margin: 0px;
+    background-color: #56042C;
+}
+
 .container{
     height: 100vh;
     width: 100%;
@@ -17,6 +34,7 @@
     justify-content: center;
     background-color: #56042C;
     column-gap: 30px;
+    /* padding-top:; */
 }
 
 .form{

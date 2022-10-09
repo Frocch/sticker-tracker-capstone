@@ -26,13 +26,14 @@
 }
 
 .all-stickers-btn{
+    font-size: 24px;
     background-color: #1077C3;
     text-align: center;
     border-radius: 6px;
     border: none;
     color: #FEC310;
     display: inline-block;
-    font-size: 18px;
+    /* font-size: 18px; */
     padding: 10px 47px;
     margin-right: 50px;
 }
@@ -44,20 +45,21 @@
     border: none;
     color: #FEC310;
     display: inline-block;
-    font-size: 18px;
+    /* font-size: 18px; */
     padding: 10px 24px;
     margin-left: 50px;
 }
 
 
 .album-btn{
+    font-size: 24px;
     background-color: #1077C3;
     text-align: center;
     border-radius: 6px;
     border: none;
     color: #FEC310;
     display: inline-block;
-    font-size: 18px;
+    /* font-size: 18px; */
     padding: 10px 53px;
     margin-right: 50px;
     margin-left: 50px;
@@ -101,13 +103,13 @@
 }
 
 .team-name {
-    font-size: 20px;
+    font-size: 26px;
     font-weight: 400;
     color: #FEC310;
     background-color: #56042C;
     margin-left: 50px;
     margin-right: 50px;
-    padding-bottom: 5px;
+    /* padding-bottom: 5px; */
     border: solid;
     border-width: 1px;
     border-radius: 3px;
