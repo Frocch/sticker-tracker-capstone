@@ -100,9 +100,9 @@ function signupSubmitHandler(e) {
     .then(res => {
         console.log(res.data)
         localStorage.setItem('userId', res.data[0].user_id)
+        window.location = '/main'
     })
 
-    // localStorage.getItem('userId')
 }
 
 function loginSubmitHandler(e) {

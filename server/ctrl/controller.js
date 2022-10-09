@@ -60,7 +60,7 @@ module.exports = {
 
         sequelize.query(`INSERT INTO users(username, pwdhash)
         VALUES ('${username}', '${pwdHash}')
-        RETURNING user;
+        RETURNING *;
         `)
         .then(dbRes => {
             let userToReturn = dbRes[0]
@@ -71,7 +71,7 @@ module.exports = {
     },
 
     getStickers: (req, res) => {
-        sequelize.query(`SELECT stickers.name, stickers.country, countries.country_id, countries.country_name
+        sequelize.query(`SELECT stickers.name, stickers.sticker_number, sticker_id, stickers.country, countries.country_id, countries.country_name
         FROM stickers
         JOIN countries on countries.country_id = stickers.country
         ORDER BY countries.country_id;`)
@@ -79,7 +79,25 @@ module.exports = {
         .catch(err => console.log(err))
     },
 
-    getUserStickers: (req, res)=> {
-        const userId = req.params.userId
+    addSticker: (req, res) => {
+        const userId = req.body.userId
+        const stickerId = req.body.stickerId
+
+        sequelize.query(`INSERT INTO user_album (user_id, sticker_id)
+        VALUES ('${userId}', '${stickerId}');`)
+        .then(dbRes => res.status(200).send(dbRes[0]))
+        .catch(err => res.status(400).send(err))
+    },
+
+    getUserAlbum: (req, res)=> {
+        const userId = req.params.userid
+        sequelize.query(`SELECT stickers.sticker_id, stickers.sticker_number, stickers.name, stickers.country, user_album.sticker_id, user_album.user_id, countries.country_id, countries.country_name
+        FROM stickers
+        JOIN user_album ON stickers.sticker_id = user_album.sticker_id
+        JOIN countries ON stickers.country = countries.country_id
+        WHERE user_album.user_id = ${userId}; `)
+        .then(dbRes => res.status(200).send(dbRes[0]))
+        .catch(err => console.log(err))
     }
+
 }

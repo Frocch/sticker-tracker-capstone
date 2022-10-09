@@ -5,15 +5,17 @@ const path = require("path");
 const app = express();
 const { seed } = require('./seed.js');
 const { login,
-        signup, 
-        allTeams, 
+        signup,  
         serveLogin, 
         serveLoginCss, 
         serveLoginJs, 
         serveMain, 
         serveMainCss, 
         serveMainJs,
-        getStickers } = require('./ctrl/controller.js');
+        getStickers,
+        addSticker,
+        getUserAlbum
+     } = require('./ctrl/controller.js');
 
 const { sign } = require('crypto');
 const { get } = require('http');
@@ -24,18 +26,20 @@ app.use(cors());
 //DEV
 app.post('/seed', seed)
 
-//PUBLIC
+//PUBLIC - USER LOGIN/SIGNUP
 app.get('/', serveLogin)
 app.get('/logincss', serveLoginCss)
 app.get('/loginjs', serveLoginJs)
 app.post('/users/login', login)
 app.post('/users/signup', signup)
 
+// PUBLIC - MAIN PAGE
 app.get('/main', serveMain,)
-app.get('/stickers', getStickers)
 app.get('/maincss', serveMainCss)
 app.get('/mainjs', serveMainJs)
-
+app.get('/stickers', getStickers)
+app.post('/userstickers', addSticker)
+app.get(`/useralbum/:userid`, getUserAlbum)
 
 
 const port = process.env.PORT || 5050;
