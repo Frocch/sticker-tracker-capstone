@@ -4,6 +4,7 @@ const stickerSection = document.querySelector('.sticker-list')
 const teamSection = document.querySelector('.teams')
 const teamStickers = document.querySelector('.team-stickers')
 const albumBtn = document.getElementById('album-btn')
+const logoutBtn = document.getElementById('logout-btn')
 
 
 function getStickers() {
@@ -55,12 +56,12 @@ function getUserStickers() {
         
         axios.get(`/useralbum/${userId}`)
         .then(res => {
-            console.log(res.data)
             stickerSection.innerHTML = ''
             let countryContainers = []
             let previousCountry = ''
             let currentCountryIndex = -1
-        
+            
+
             res.data.forEach((elem, i) => {
                 if( elem.country_id != previousCountry) {
                     previousCountry = elem.country_id
@@ -82,8 +83,16 @@ function getUserStickers() {
             stickerSection.appendChild(elem)
         })
         }).catch(err => console.log(err))
-    }
+}
 
-    
+function logOutButton() {
+    axios.get('/logout')
+    .then(res => {
+        localStorage.removeItem('userId')
+        window.location.href('/')
+    })
+}
+
+// logoutBtn.addEventListener('click', logOutButton)
 albumBtn.addEventListener('click', getUserStickers)
 getStickers()

@@ -70,6 +70,10 @@ module.exports = {
         .catch(err => console.log(err))
     },
 
+    // logout: (req, res) => {
+    //     res.status(200).send('Logout Succesfull')
+    // },
+
     getStickers: (req, res) => {
         sequelize.query(`SELECT stickers.name, stickers.sticker_number, sticker_id, stickers.country, countries.country_id, countries.country_name
         FROM stickers
