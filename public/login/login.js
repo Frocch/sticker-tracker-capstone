@@ -11,7 +11,6 @@ const number = document.getElementById("number");
 const length = document.getElementById("length");
 const signupForm = document.getElementById("signup");
 const loginForm = document.getElementById("login")
-// const { signup } = require('./ctrl/controller.js');
 
 links.forEach(link => {
     link.addEventListener("click", e => {
@@ -98,7 +97,6 @@ function signupSubmitHandler(e) {
 
     axios.post('/users/signup', bodyObj)
     .then(res => {
-        console.log(res.data)
         localStorage.setItem('userId', res.data[0].user_id)
         window.location = '/main'
     })

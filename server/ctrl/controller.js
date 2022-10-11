@@ -2,7 +2,8 @@ require("dotenv").config();
 const bcrypt = require('bcryptjs');
 const { CONNECTION_STRING } = process.env;
 const Sequelize = require("sequelize");
-const path = require('path')
+const path = require('path');
+const { send } = require("process");
 
 const sequelize = new Sequelize(CONNECTION_STRING, {
     dialect: 'postgres',
@@ -67,12 +68,8 @@ module.exports = {
             delete userToReturn.pwdhash
             res.status(200).send(userToReturn)
         })
-        .catch(err => console.log(err))
+        .catch(err => res.status(400).send(err))
     },
-
-    // logout: (req, res) => {
-    //     res.status(200).send('Logout Succesfull')
-    // },
 
     getStickers: (req, res) => {
         sequelize.query(`SELECT stickers.name, stickers.sticker_number, sticker_id, stickers.country, countries.country_id, countries.country_name
