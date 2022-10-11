@@ -10,6 +10,7 @@ Sticker Tracker is a fullstack web application designed to use in tandem with th
 * Express
 * Node.js
 * Heroku
+* Sequelize.js
 * PostgreSQL
 * HTML
 * CSS
@@ -23,5 +24,5 @@ Sticker Tracker is a fullstack web application designed to use in tandem with th
 * User can sign out from the home page.
 * Team stickers are generated and displayed directly from information in the database, which means that this app could very easily be used to a future version of the album or any other album by simply using a database with said updated information and updating HTML to match said album. 
 
-## How to run locally
+
 
