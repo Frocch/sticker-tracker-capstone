@@ -1,4 +1,3 @@
-require("dotenv").config();
 const bcrypt = require('bcryptjs');
 const { DATABASE_URL } = process.env;
 const Sequelize = require("sequelize");

@@ -12,6 +12,7 @@ const length = document.getElementById("length");
 const signupForm = document.getElementById("signup");
 const loginForm = document.getElementById("login")
 
+// SIGNUP AND LOGIN INTERFACE FUNCTIONALITY
 links.forEach(link => {
     link.addEventListener("click", e => {
         e.preventDefault();
@@ -84,6 +85,7 @@ pswConf.onkeyup = function() {
     }
 }
 
+//SIGNUP AND LOGIN SUBMIT HANDLERS
 function signupSubmitHandler(e) {
     e.preventDefault()
 

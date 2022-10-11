@@ -34,7 +34,6 @@
     border: none;
     color: #FEC310;
     display: inline-block;
-    /* font-size: 18px; */
     padding: 10px 47px;
     margin-right: 50px;
 }
@@ -46,7 +45,6 @@
     border: none;
     color: #FEC310;
     display: inline-block;
-    /* font-size: 18px; */
     padding: 10px 24px;
     margin-left: 50px;
 }
@@ -60,7 +58,6 @@
     border: none;
     color: #FEC310;
     display: inline-block;
-    /* font-size: 18px; */
     padding: 10px 53px;
     margin-right: 50px;
     margin-left: 50px;
@@ -76,11 +73,8 @@
     border: none;
     color: #FEC310;
     display: inline-block;
-    /* font-size: 18px; */
     padding: 10px 53px;
-    /* margin: auto; */
     margin-left: 10%;
-    /* margin-top: 50px; */
 }
 
 .menu-btns{

@@ -1,5 +1,3 @@
-
-
 const stickerSection = document.querySelector('.sticker-list')
 const teamSection = document.querySelector('.teams')
 const teamStickers = document.querySelector('.team-stickers')
@@ -93,6 +91,5 @@ function logOutButton() {
     })
 }
 
-// logoutBtn.addEventListener('click', logOutButton)
 albumBtn.addEventListener('click', getUserStickers)
 getStickers()
