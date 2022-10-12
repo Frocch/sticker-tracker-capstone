@@ -32,6 +32,6 @@ The function to display Missing Stickers is not currently live on the current ve
 * User can acces "My Album" button to change the page display to show their current album in the same format as it was for the full list of stickers.
 * User can sign out from the home page.
 * Team stickers are generated and displayed directly from information in the database, which means that this app could very easily be used to a future version of the album or any other album by simply using a database with said updated information and updating HTML to match said album. 
-* Upcoming Features include Missing Sticker list, Sticker rarity labels and Repeat Stickers list so the user can upload their repeated stickers in order to have access to a list of their repeated stickers they are willing to trade. Current priority is correcting known bugs and issues before implementing additional features.
+* Upcoming Features include updating the database to hold all stickers in the album, Missing Sticker list, Sticker rarity labels and Repeat Stickers list so the user can upload their repeated stickers in order to have access to a list of their repeated stickers they are willing to trade. Current priority is correcting known bugs and issues before implementing additional features.
 
 
