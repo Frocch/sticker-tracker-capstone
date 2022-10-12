@@ -17,6 +17,7 @@ The function to display Missing Stickers is not currently live on the current ve
 * JavaScript
 * Express
 * Node.js
+* Bcrypt
 * Heroku
 * Sequelize.js
 * PostgreSQL
